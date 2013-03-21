@@ -1,3 +1,4 @@
+.ui-mobile, .ui-mobile body{background:#000000;}
 a.ctlogo, a.ctlogo:active, a.ctlogo:hover, a.ctlogo:visited, a.ctlogo:link {
     background-image: url("http://images.traderonline.com/img/tol-design/ctol/m/v2/sprt-logo-400x34.png");
 }
