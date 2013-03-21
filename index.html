@@ -10,6 +10,9 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
 	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+  <script src="javascript/megapix-image.js"></script>
+	<script src="javascript/picupload.js"></script>
+	<script src="javascript/jquery.ocupload-1.1.2.js"></script>        
     </head>
     <body>
 <!-- Start page 1 -->
@@ -25,12 +28,14 @@
                     <hr>
                     <h2>Start by adding a photo.</h2>
                 </div>
-                <div class="imageBox">
-                    <img src="http://codiqa.com/static/images/v2/image.png" alt="image">
+                <div id="canvas-container" class="imageBox">    
+                  	<img src="http://codiqa.com/static/images/v2/image.png" alt="image" class="imagePlaceHolder">          
+                 <canvas id="printUserPicture">Your browser does not support the HTML5 canvas tag.</canvas>
                 </div>
                 <div id="canvas-container">                
                 <canvas id="printUserImage">Your browser does not support the HTML5 canvas tag.</canvas>
                 </div>
+                <input type="file" id="getUserImage" accept="image/*" capture>
                 <a data-role="button" href="#page2" data-transition="flow">Use</a>
                 <a data-role="button" href="" id="getUserImage">Add More</a>
         </div>
