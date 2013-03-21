@@ -17,14 +17,18 @@
     <body>
         <!-- Home -->
         <div data-role="page" id="page1">
-            <div data-theme="a" data-role="header">
-                <h3>
-                    <a class="ctlogo logo" title="CycleTrader.com" href="/"><span></span>CycleTrader.com</a>
-                </h3>
-            </div>
+        <div data-theme="a" data-role="header">
+            <h3>
+                <a class="ctlogo logo" title="CycleTrader.com" href="/"><span></span>CycleTrader.com</a>
+            </h3>
+        </div>
+        
+        
             <div data-role="content">
                 <div class="content-primary">		
-                    <h2>Start by adding a photo!</h2>
+                    <p>The fast way to post a classified.</p>
+                    <hr>
+                    <h2>Start by adding a photo.</h2>
                 </div>
                 <div class="imageBox">
                     <img src="http://codiqa.com/static/images/v2/image.png" alt="image">
@@ -32,10 +36,52 @@
                 <div id="canvas-container">                
                 <canvas id="printUserImage">Your browser does not support the HTML5 canvas tag.</canvas>
                 </div>
-                <a data-role="button" href="#page1" id="getUserImage">
-                    Add Photo
-                </a>
+                <a data-role="button" href="#page1" id="getUserImage">Use</a>
+                <a data-role="button" href="#page1" id="getUserImage">Add More</a>
+<hr><hr><hr><hr>
+                <div class="content-primary2">
+                    <div class="ui-loader ui-corner-all ui-body-a ui-loader-verbose"><span class="ui-icon ui-icon-loading"></span><h1>...building your ad</h1></div>
+                </div>
+<hr><hr><hr><hr>
+                <div class="content-primary3">		
+                    <h2>Here's what we recognized:</h2>
+                    <div class="listingContainer"> 
+                            <div class="resultImgBlock lfloat">
+                                <img border="0" alt="2011 Kawasaki Ninja ZX-6R " src="http://images.traderonline.com/img/5/dealer/6700320/106225924_1thumb_140x105.jpg" style="display: inline;" onerror="TOL.Module.Image.ImgError(this)">
+                            </div>
+                            <div class="resultInfoBox lfloat">
+                                <div class="resultTitle">
+                                    <a href="">2011</a> <a href="">Yamaha</a> <a href="">YZ</a> <a href="">250</a>
+                                </div>
+                                <div class="resultInfo">
+                                    <div class="price">$7,999</div>
+                                    <div class="description">Red, 600cc, 900lbs, 4 cylinder, sportbike</div>      	
+                                    <div class="location">Carrollton, TX</div> 
+                                </div>
+                            </div>
+                        <div class="clear"></div>
+                    </div>                                    
+                    <div class="clear"></div>
+                
+                <h2>Want us to post it?</h2>
+                <a data-role="button" href="#page1" id="getUserImage">Yes</a>
+                <a href="" class="moreOptionsLink">No, I want more options.</a>
+                </div>
+<hr><hr><hr><hr>
+                <div class="content-primary4">		
+                    <h2>Just need some info:</h2>
+                    <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><label for="number-pattern" class="ui-input-text">Phone:</label><input type="number" placeholder="555-567-5678" value="" id="number-pattern" pattern="[0-9]*" name="number" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset"></div>
+                    <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><label for="email" class="ui-input-text">Email:</label><input type="email" value="" id="email" name="email" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset"></div>
+                    <a data-role="button" href="#page1" id="getUserImage">Post It!</a>
+                </div>
             </div>
-        </div>
+
+        
+<hr><hr><hr><hr>    
+                <div class="content-primary5">		
+                    <h2>All done! <a href="">Check out your ad.</a></h2>
+                </div>        
+        
+        </div>  
     </body>
 </html>

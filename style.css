@@ -54,4 +54,9 @@ canvas{
     width:200px;
     border:1px solid #b8b8b8;
 }
-
+.content-primary2 .ui-loader{display:block; position:relative;}
+.rfloat{float:right;}
+.lfloat{float:left;}
+.clear{clear:both;}
+.resultImgBlock {padding:3px; border:1px solid #b8b8b8; margin-right:10px;background:white;}
+.moreOptionsLink{text-align:center;}
