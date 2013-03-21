@@ -1,16 +1,30 @@
 <?php     
     date_default_timezone_set('UTC');
-
+		$time_stamp = date('YmdHis');
     // Url to the IQEngines Query api
     $url = "http://api.iqengines.com/v1.2/query/";
-    
+		
+		//make filename usable
+		
+	  $target = "uploads/image" . $time_stamp. ".jpg"; 
+  	print_r($_FILES);
+ //In my example, the file is received from an iPhone application.
+  if( move_uploaded_file($_FILES["temp"]["tmp_name"],
+      "uploads/" . $_FILES["temp"]["name"]) ) {
+      //CONTINUE
+      echo json_encode("The file has been uploaded to " . $target);
+			
+  } else{
+      echo json_encode("There was an error uploading the file, please try again!");
+  }
+
+  exit; 
     // API variables
-    $api_key = '<API_KEY>';
-    $api_secret = '<API_SECRET>';
-    $filename = "sample.jpg";
+    $api_key = 'dd8ed7f3899742e7877f5fb1b3e91893';
+    $api_secret = 'dd57c5a4ff984dbbbdfaa56eb6cd3a7e';
+    $filename = $target;
     $img = '@'.realpath($filename);
     $json = '1';
-    $time_stamp = date('YmdHis');
 
     // Compose the api raw signature string
     $raw_string = 'api_key'.$api_key.'img'.$filename.'json'.$json.'time_stamp'.$time_stamp;
@@ -46,5 +60,5 @@
     $response = curl_exec($ch);
 
     // View the response from the API server
-    echo $response;
+    print_r( $response);
 ?>
