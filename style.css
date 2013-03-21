@@ -1,0 +1,57 @@
+a.ctlogo, a.ctlogo:active, a.ctlogo:hover, a.ctlogo:visited, a.ctlogo:link {
+    background-image: url("http://images.traderonline.com/img/tol-design/ctol/m/v2/sprt-logo-400x34.png");
+}
+a.logo, a.logo:active, a.logo:focus, a.logo:hover, a.logo:visited, a.logo:link {
+    background-repeat: no-repeat;
+    display: block;
+    height: 45px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    text-indent: -3000px;
+    top: 7px;
+    width: 200px;
+}
+a.logo, a.logo:visited, a.logo:link {
+    background-color: transparent;
+    background-position: 5px 3px;
+}
+a.logo span {
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 0 0 4px #E8E8E8;
+    display: block;
+    float: left;
+    height: 30px;
+    left: -20px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    width: 30px;
+}
+a.ctlogo span {
+    background: url("http://images.traderonline.com/img/tol-design/ctol/m/v2/sprt-icons-75x35.png") no-repeat scroll -43px -1px transparent;
+}
+
+.imageBox{
+    height: 200px; 
+    position: relative; 
+    background-color: #fbfbfb; 
+    border: 1px solid #b8b8b8;
+}
+.imageBox img{
+    position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px
+}
+#canvas-container {
+   width: 100%;
+   text-align:center;
+   margin:10px 0px;
+}
+canvas{
+    display: inline;
+    text-align:center;
+    margin:0px auto;
+    width:200px;
+    border:1px solid #b8b8b8;
+}
+
