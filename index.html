@@ -44,7 +44,7 @@
                     <h2>Start by adding a photo.</h2>
                 </div>
                 <div id="photoBtn" class="imageBox">
-                    <!--photoInput is hidden--><div class="photoInput"><input type="file" onChange="previewPicture(this)" id="getUserImage" accept="image/*" capture></div>
+                    <!--photoInput is hidden--><div class="photoInput"><input type="file" id="getUserImage" accept="image/*" capture></div>
                 <div style="display:none;" class="ui-loader ui-corner-all ui-body-a ui-loader-verbose" id="processingRequest"><span class="ui-icon ui-icon-loading"></span><h1>...building your ad</h1>
                 </div>
                 <canvas id="printUserPicture">Your browser does not support the HTML5 canvas tag.</canvas>
@@ -69,37 +69,41 @@
                     <h2>Here's what we recognized:</h2>
                     <div class="listingContainer"> 
                             <div class="resultImgBlock lfloat">
-                            <img id="userImage" >
+                            <img id="userImage" width="200px" height="auto">
                             </div>
                             <div class="resultInfoBox lfloat">
                                 <div class="resultTitle">
                                     <fieldset data-type="horizontal" data-role="controlgroup">
-                                    <select>
+                                    <select id="year">
                                       <option value="2011">2011</option>
                                       <option value="2012">2012</option>
                                       <option value="2013">2013</option>
                                       <option value="2014">2014</option>
                                     </select>
 
-                                    <select>
+                                    <select id="make">
                                       <option value="Honda">Honda</option>
+                                      <option value="Harley-Davidson">Harley-Davidson</option>
                                       <option value="Yamaha">Yamaha</option>
-                                      <option value="Honda">Honda</option>
+                                      <option value="honda">Honda</option>
                                       <option value="Suzuki">Suzuki</option>
                                     </select> 
 
-                                    <select>
+                                    <select id="model">
                                       <option value="CBR 600">CBR 600</option>
                                       <option value="CBR 900">CBR 900</option>
                                       <option value="CBR 1000">CBR 1000</option>
                                       <option value="CBR 1200">CBR 1200</option>
+                                      <option value="gold wing">Gold Wing</option>
+                                      <option value="Dyna Wide Glide FXDWG">Dyna Wide Glide FWDWG</option>
+
                                     </select>                                     
                                     </fieldset>
                                 </div>
                                 <div class="resultInfo">
-                                    <input type="text" value="$7,999" id="price"/>
-                                    <input type="text" value="Red, 600cc, 900lbs, 4 cylinder, sportbike" id="description"/>
-                                    <input type="text" value="Norfolk, VA" id="location"/>
+                                    <input type="text" value="Calculating average CycleTrader.com price..." id="price"/>
+                                    <input type="text" value="Enter a Description" id="description"/>
+                                    <input type="text" value="Carrollton, TX" id="location"/>
                                 </div>
                             </div>
                         <div class="clear"></div>
