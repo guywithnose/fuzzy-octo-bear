@@ -42,24 +42,14 @@ a.ctlogo span {
     background: url("http://images.traderonline.com/img/tol-design/ctol/m/v2/sprt-icons-75x35.png") no-repeat scroll -43px -1px transparent;
 }
 
-.imageBox{
-    height: 200px; 
-    position: relative; 
-    background-color: #fbfbfb; 
-    border: 1px solid #b8b8b8;
-}
-.imageBox img{
-    position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px
-}
-#canvas-container {
-   width: 100%;
-   text-align:center;
-   margin:10px 0px;
-	 padding:1px 0px;
-	 height:auto;
+.imageBox {
+    background: url("http://codiqa.com/static/images/v2/image.png") no-repeat scroll center center #FBFBFB;
+    border: 1px solid #B8B8B8;
+    padding: 10px;
+    position: relative;
 }
 canvas{
-    display: inline;
+    display: block;
     text-align:center;
     margin:0px auto;
     width:200px;
@@ -73,14 +63,15 @@ canvas{
 .moreOptionsLink{text-align:center;}
 
 .ui-bar-a{
-    background:url('images/realm-swoosh.png') repeat scroll 0px 0px;
+    background:url('../images/realm-swoosh.png') repeat scroll 0px 0px;
     background-size: 100%;
-    background-color:#111111;
+    background-color:#200000;
 }
-.ui-header .ui-title, .ui-footer .ui-title{margin:15px 0px;}
-
-
-.ui-loader-verbose{
-margin-top:5px !important;
+.ui-header .ui-title, .ui-footer .ui-title{margin:10px 0px;}
+.ui-footer h6{font-weight:normal;font-size:14px;color:#b6b6b6;}
+.photoInput{
+    height:0px; 
+    width:0px; 
+    overflow:hidden;
 }
 
