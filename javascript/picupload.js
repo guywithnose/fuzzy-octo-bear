@@ -16,6 +16,11 @@ $('document').ready(function(){
 			renderedImage.render(printUserPicture, { maxWidth: 400, maxHeight: 400});
 			$('.imagePlaceHolder').hide();
 			$('#processingRequest').fadeIn();
+			var reader = new FileReader();
+			reader.onload = function(e){
+				 $('#userImage').attr('src', e.target.result);
+				}
+			reader.readAsDataURL($(':file[name="temp"]')[0].files[0]);
 			uploadPicture.submit();
 		}
 	});
