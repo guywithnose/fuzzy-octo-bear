@@ -1,11 +1,11 @@
 // JavaScript Document
 $(document).ready(function() {
   if (google.loader.ClientLocation)
-	{
+  {
     userCity = google.loader.ClientLocation.address.city;
     userState = google.loader.ClientLocation.address.region;
     $('#userLocation').html("<input type='text' name='userCity' value='" + userCity +
-	  "' /><br /><input type='text' name='userState' value='" + userState + "' />");
+        "' /><br /><input type='text' name='userState' value='" + userState + "' />");
   }
   else
   {
