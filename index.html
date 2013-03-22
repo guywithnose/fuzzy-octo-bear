@@ -20,6 +20,8 @@
        document.getElementById("getUserImage").click();
      }
      </script>
+  <script type="text/javascript" src="http://www.google.com/jsapi?key=AIzaSyCjxTG2gQuk0JofunIEZ4nBHj0uwcOIolA&amp;sensor=true">
+  </script>      
     </head>
     <body>
 <!-- Start page 1 -->
@@ -42,6 +44,7 @@
             </div>
         </div>
 <!---end page 1-->
+
 <!-- Start page 2 -->
         <div data-role="page" id="page2">
         <div data-theme="a" data-role="header">
@@ -77,7 +80,7 @@
                                 <div class="resultInfo">
                                     <label for="price">Price</label><input type="text" value="$7,999" id="price"/>
                                     <div class="description">Red, 600cc, 900lbs, 4 cylinder, sportbike</div>      	
-                                    <div class="location">Carrollton, TX</div> 
+                                    <div class="location" id="userLocation">Carrollton, TX</div> 
                                 </div>
                             </div>
                         <div class="clear"></div>
@@ -88,7 +91,6 @@
                 <a data-role="button" href="#page4" data-transition="slidefade">Yes</a>
                 <a href="" class="moreOptionsLink">No, I want more options.</a>
                 </div>
-        </div>
         </div>
 <!---end page 3-->
 <!-- Start page 4 -->
@@ -105,9 +107,6 @@
                     <a data-role="button" href="#page5" data-transition="slidefade">Post It!</a>
                 </div>
             </div>
-
-        </div>
-        </div>
 <!---end page 4-->
 <!-- Start page 5 -->
         <div data-role="page" id="page5">
@@ -120,8 +119,6 @@
                     <h2>All done! <a href="http://www.cycletrader.com">Check out your ad.</a></h2>
                 </div>        
         </div>
-        </div>
 <!---end page 5-->        
-        </div>  
     </body>
 </html>
