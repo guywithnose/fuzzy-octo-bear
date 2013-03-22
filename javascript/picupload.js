@@ -1,7 +1,4 @@
 $('document').ready(function(){
-	function previewPicture(input){
-			$('#userImage').src=input.value;
-		}
 	
 	var uploadPicture = $('#getUserImage').upload({
 		name: 'temp',
@@ -20,6 +17,7 @@ $('document').ready(function(){
 			$('.imagePlaceHolder').hide();
 			$('#processingRequest').fadeIn();
 			uploadPicture.submit();
+			$('#userImage').attr('src', 'php-iqengines/uploads/image.jpg');
 		}
 	});
 });

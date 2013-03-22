@@ -29,7 +29,7 @@ $url = "https://query-api.kooaba.com/v4/query";
 		
 		//make filename usable
 		
-	  $target = "uploads/image" . $time_stamp. ".jpg"; 
+	  $target = "uploads/image.jpg"; 
   	//print_r($_FILES);
  //In my example, the file is received from an iPhone application.
   if( move_uploaded_file($_FILES["temp"]["tmp_name"],
