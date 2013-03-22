@@ -65,23 +65,9 @@ $context = stream_context_create(array(
                    )
               ));
 
-//$result = file_get_contents($url, false, $context);
+$result = file_get_contents($url, false, $context);
 
-
-    // Here I make the cURL request to the API
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.1) Gecko/20061204 Firefox/2.0.0.1');
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);  // RETURN THE CONTENTS OF THE CALL
-    curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
-    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 2);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_HEADER, false);  // DO NOT RETURN HTTP HEADERS 
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: multipart/form-data; boundary='.$boundary, 'Authorization: Token ' . $query_key));
-            $postdata = array("image" => "@/".realpath($file_name));
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $postdata);
-    echo curl_exec($ch);
-
-//echo $result;
+echo $result;
 
 ?>
 
