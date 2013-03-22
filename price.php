@@ -27,6 +27,8 @@ $minPrice=0;
 $maxPrice=0;
 $minYear=0;
 $maxYear=0;
+$categories=array();
+
 
 $testing=(TOL_Nebulous::getInstance()->getCycles(
 array(
@@ -35,7 +37,7 @@ array(
 "view" => "full"
 )));
 
-$categories=array();
+
 foreach ($testing["result"] as $cycle)
 {
  if (!empty($cycle["price"]))
@@ -59,6 +61,7 @@ foreach ($testing["result"] as $cycle)
 	 $total = $total + $cycle["price"];
 	 $i++;
  }
+
  if (isset($cycle['categoryName']) && $cycle['categoryName'] != '' ) {
   if (isset($categories[$cycle['categoryName']])) {
   	$categories[$cycle['categoryName']]++;
@@ -67,6 +70,7 @@ foreach ($testing["result"] as $cycle)
   }
  }
 }
+
 echo json_encode(
 	array(
 		"Make" => $bikeMake,

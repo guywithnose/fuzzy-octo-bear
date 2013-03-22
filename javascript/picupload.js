@@ -5,6 +5,15 @@ $('document').ready(function(){
 		action: 'php-iqengines/query.php',
 		onComplete: function(data){
 			console.log($.parseJSON(data).results[0].metadata);
+$.ajax({
+'url' : 'price.php',
+'dataType':'json',
+data: $.parseJSON(data).results[0].metadata,
+success: function(data){
+$('input#price').val(data.Price);
+console.log(data);
+}
+});
 			$('#processingRequest').fadeOut('fast');
 			$.mobile.changePage('#page2', {transition: 'pop'});
 		},
