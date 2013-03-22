@@ -1,4 +1,8 @@
 $('document').ready(function(){
+	function previewPicture(input){
+			$('#userImage').src=input.value;
+		}
+	
 	var uploadPicture = $('#getUserImage').upload({
 		name: 'temp',
 		enctype: 'multipart/form-data',
@@ -10,17 +14,11 @@ $('document').ready(function(){
 		},
 		onSelect: function(){
 			var inputFile = $(':file[name="temp"]')[0].files[0];
-			document.getElementById('userImage').innerHTML = "<img src='" + $(':file[name="temp"]')[0].files[0] + "' />" ;
 			var renderedImage = new MegaPixImage(inputFile);
 			var printUserPicture = document.getElementById('printUserPicture');
 			renderedImage.render(printUserPicture, { maxWidth: 400, maxHeight: 400});
 			$('.imagePlaceHolder').hide();
 			$('#processingRequest').fadeIn();
-			var reader = new FileReader();
-			reader.onload = function(e){
-				 $('#userImage').attr('src', e.target.result);
-				}
-			reader.readAsDataURL($(':file[name="temp"]')[0].files[0]);
 			uploadPicture.submit();
 		}
 	});
