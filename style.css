@@ -55,6 +55,8 @@ a.ctlogo span {
    width: 100%;
    text-align:center;
    margin:10px 0px;
+	 padding:1px 0px;
+	 height:auto;
 }
 canvas{
     display: inline;
@@ -77,4 +79,8 @@ canvas{
 }
 .ui-header .ui-title, .ui-footer .ui-title{margin:15px 0px;}
 
+
+.ui-loader-verbose{
+margin-top:5px !important;
+}
 
