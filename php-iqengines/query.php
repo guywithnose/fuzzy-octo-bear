@@ -24,12 +24,12 @@ $url = "https://query-api.kooaba.com/v4/query";
 
 # Image to query with
     date_default_timezone_set('UTC');
-		$time_stamp = date('YmdHis');
+		$time_stamp = $_GET['timestamp'];
     // Url to the IQEngines Query ap
 		
 		//make filename usable
 		
-	  $target = "uploads/image.jpg"; 
+	  $target = "uploads/image" . $time_stamp . ".jpg"; 
   	//print_r($_FILES);
  //In my example, the file is received from an iPhone application.
   if( move_uploaded_file($_FILES["temp"]["tmp_name"],
