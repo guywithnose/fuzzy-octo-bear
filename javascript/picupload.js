@@ -1,12 +1,9 @@
 $('document').ready(function() {
-  function previewPicture(input) {
-    $('#userImage').src = input.value;
-  }
-
+	var randomnumber=Math.floor(Math.random()*1000);
   var uploadPicture = $('#getUserImage').upload({
     name: 'temp',
     enctype: 'multipart/form-data',
-    action: 'php-iqengines/query.php',
+    action: 'php-iqengines/query.php?timestamp=' + randomnumber,
     onComplete: function(data) {
       data = $.parseJSON(data).results[0].metadata;
       make = data.make;
@@ -50,6 +47,10 @@ $('document').ready(function() {
       $('.imagePlaceHolder').hide();
       $('#processingRequest').fadeIn();
       uploadPicture.submit();
+			setTimeout(function(){
+				$('#userImage').attr('src', 'php-iqengines/uploads/image' + randomnumber + '.jpg');
+			}, 2000);
     }
   });
 });
+
