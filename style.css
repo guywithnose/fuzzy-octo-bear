@@ -1,4 +1,12 @@
-.ui-mobile, .ui-mobile body{background:#000000;}
+.ui-mobile, .ui-mobile body{
+    /*background:url('images/bg.jpg') no-repeat scroll 0px 0px;
+    background-color:#111111;
+    background-size: 100%;*/
+}
+.ui-mobile, .ui-mobile .ui-page{
+    -webkit-box-shadow: inset 0px 0px 100px 1px rgba(0, 0, 0, .5);
+    box-shadow: inset 0px 0px 100px 1px rgba(0, 0, 0, .5); 
+}
 a.ctlogo, a.ctlogo:active, a.ctlogo:hover, a.ctlogo:visited, a.ctlogo:link {
     background-image: url("http://images.traderonline.com/img/tol-design/ctol/m/v2/sprt-logo-400x34.png");
 }
@@ -61,3 +69,12 @@ canvas{
 .clear{clear:both;}
 .resultImgBlock {padding:3px; border:1px solid #b8b8b8; margin-right:10px;background:white;}
 .moreOptionsLink{text-align:center;}
+
+.ui-bar-a{
+    background:url('images/realm-swoosh.png') repeat scroll 0px 0px;
+    background-size: 100%;
+    background-color:#111111;
+}
+.ui-header .ui-title, .ui-footer .ui-title{margin:15px 0px;}
+
+
