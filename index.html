@@ -13,7 +13,9 @@
 	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
     <script src="javascript/megapix-image.js"></script>
 	<script src="javascript/picupload.js"></script>
-	<script src="javascript/jquery.ocupload-1.1.2.js"></script>        
+	<script src="javascript/jquery.ocupload-1.1.2.js"></script>  
+  <script type="text/javascript" src="http://www.google.com/jsapi?key=AIzaSyCjxTG2gQuk0JofunIEZ4nBHj0uwcOIolA&amp;sensor=true">
+  </script>      
     </head>
     <body>
 <!-- Start page 1 -->
@@ -33,32 +35,14 @@
                   	<img src="http://codiqa.com/static/images/v2/image.png" alt="image" class="imagePlaceHolder">          
                  <canvas id="printUserPicture">Your browser does not support the HTML5 canvas tag.</canvas>
                 </div>
-                <div id="canvas-container">                
-                <canvas id="printUserImage">Your browser does not support the HTML5 canvas tag.</canvas>
-                </div>
-                <input type="file" id="getUserImage" accept="image/*" capture>
-                <a data-role="button" href="#page2" data-transition="slidefade">Use</a>
-                <a data-role="button" href="" id="getUserImage">Add More</a>
+                <div style="display:none;" class="ui-loader ui-corner-all ui-body-a ui-loader-verbose" id="processingRequest"><span class="ui-icon ui-icon-loading"></span><h1>Processing your request</h1></div>
+                	<input type="file" id="getUserImage" accept="image/*" capture>
         </div>
         </div>
 <!---end page 1-->
+
 <!-- Start page 2 -->
         <div data-role="page" id="page2">
-        <div data-theme="a" data-role="header">
-            <h3>
-                <a class="ctlogo logo" title="CycleTrader.com" href="#page1" data-transition="fade"><span></span>CycleTrader.com</a>
-            </h3>
-        </div>
-            <div data-role="content">
-                <div class="content-primary2">
-                    <div style="display:block;" class="ui-loader ui-corner-all ui-body-a ui-loader-verbose"><span class="ui-icon ui-icon-loading"></span><h1>...building your ad</h1></div>
-                </div>
-                <a data-role="button" href="#page3" data-transition="slidefade">ajax loads next page</a>
-        </div>
-        </div>
-<!---end page 2-->
-<!-- Start page 3 -->
-        <div data-role="page" id="page3">
         <div data-theme="a" data-role="header">
             <h3>
                 <a class="ctlogo logo" title="CycleTrader.com" href="#page1" data-transition="fade"><span></span>CycleTrader.com</a>
@@ -77,7 +61,7 @@
                                 <div class="resultInfo">
                                     <label for="price">Price</label><input type="text" value="$7,999" id="price"/>
                                     <div class="description">Red, 600cc, 900lbs, 4 cylinder, sportbike</div>      	
-                                    <div class="location">Carrollton, TX</div> 
+                                    <div class="location" id="userLocation">Carrollton, TX</div> 
                                 </div>
                             </div>
                         <div class="clear"></div>

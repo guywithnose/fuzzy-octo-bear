@@ -12,13 +12,13 @@
   if( move_uploaded_file($_FILES["temp"]["tmp_name"],
       "uploads/" . $_FILES["temp"]["name"]) ) {
       //CONTINUE
-      echo json_encode("The file has been uploaded to " . $target);
+      echo json_encode("The file has been successfully uploaded to " . $target);
 			
   } else{
-      echo json_encode("There was an error uploading the file, please try again!");
+      echo json_encode("There was an error uploading the file, try again!");
   }
-
-  exit; 
+	sleep(5);
+	exit;
     // API variables
     $api_key = 'dd8ed7f3899742e7877f5fb1b3e91893';
     $api_secret = 'dd57c5a4ff984dbbbdfaa56eb6cd3a7e';
