@@ -7,13 +7,19 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <title>MotoRec - Powered by CycleTrader.com</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
-    <link rel="stylesheet" href="style.css" />
-	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<link rel="stylesheet" href="css/cycle-jq.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="javascript/megapix-image.js"></script>
 	<script src="javascript/picupload.js"></script>
-	<script src="javascript/jquery.ocupload-1.1.2.js"></script>        
+	<script src="javascript/jquery.ocupload-1.1.2.js"></script>     
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+    <script type="text/javascript">
+     function getFile(){
+       document.getElementById("getUserImage").click();
+     }
+     </script>
     </head>
     <body>
 <!-- Start page 1 -->
@@ -29,17 +35,11 @@
                     <hr>
                     <h2>Start by adding a photo.</h2>
                 </div>
-                <div id="canvas-container" class="imageBox">    
-                  	<img src="http://codiqa.com/static/images/v2/image.png" alt="image" class="imagePlaceHolder">          
-                 <canvas id="printUserPicture">Your browser does not support the HTML5 canvas tag.</canvas>
+                <div id="photoBtn" class="imageBox" onclick="getFile()">
+                    <!--photoInput is hidden--><div class="photoInput"><input type="file" id="getUserImage" accept="image/*" capture></div>
+                <canvas id="printUserPicture">Your browser does not support the HTML5 canvas tag.</canvas>
                 </div>
-                <div id="canvas-container">                
-                <canvas id="printUserImage">Your browser does not support the HTML5 canvas tag.</canvas>
-                </div>
-                <input type="file" id="getUserImage" accept="image/*" capture>
-                <a data-role="button" href="#page2" data-transition="slidefade">Use</a>
-                <a data-role="button" href="" id="getUserImage">Add More</a>
-        </div>
+            </div>
         </div>
 <!---end page 1-->
 <!-- Start page 2 -->
@@ -50,7 +50,7 @@
             </h3>
         </div>
             <div data-role="content">
-                <div class="content-primary2">
+                <div class="content-primary">
                     <div style="display:block;" class="ui-loader ui-corner-all ui-body-a ui-loader-verbose"><span class="ui-icon ui-icon-loading"></span><h1>...building your ad</h1></div>
                 </div>
                 <a data-role="button" href="#page3" data-transition="slidefade">ajax loads next page</a>
@@ -64,7 +64,7 @@
                 <a class="ctlogo logo" title="CycleTrader.com" href="#page1" data-transition="fade"><span></span>CycleTrader.com</a>
             </h3>
         </div>
-                <div class="content-primary3">		
+                <div class="content-primary">		
                     <h2>Here's what we recognized:</h2>
                     <div class="listingContainer"> 
                             <div class="resultImgBlock lfloat">
@@ -98,7 +98,7 @@
                 <a class="ctlogo logo" title="CycleTrader.com" href="#page1" data-transition="fade"><span></span>CycleTrader.com</a>
             </h3>
         </div>
-                <div class="content-primary4">		
+                <div class="content-primary">		
                     <h2>Just need some info:</h2>
                     <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><label for="number-pattern" class="ui-input-text">Phone:</label><input type="number" placeholder="555-567-5678" value="" id="number-pattern" pattern="[0-9]*" name="number" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset"></div>
                     <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><label for="email" class="ui-input-text">Email:</label><input type="email" value="" id="email" name="email" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset"></div>
