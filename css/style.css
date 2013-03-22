@@ -75,7 +75,6 @@ canvas{
 .photoInput{
     height:0px; 
     width:0px; 
-    overflow:hidden;
 }
 .ui-content{text-align:center;}
 .resultInfoBox {text-align:left;margin:0px auto;width:100%;}
