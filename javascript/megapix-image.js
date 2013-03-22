@@ -55,7 +55,7 @@
       py = (ey + sy) >> 1;
     }
     var ratio = (py / ih);
-    return (ratio===0)?1:ratio;
+    return (ratio === 0) ? 1 : ratio;
   }
 
   /**
@@ -64,7 +64,7 @@
   function renderImageToDataURL(img, options) {
     var canvas = document.createElement('canvas');
     renderImageToCanvas(img, canvas, options);
-    return canvas.toDataURL("image/jpeg", options.quality || 0.8);
+    return canvas.toDataURL('image/jpeg', options.quality || 0.8);
   }
 
   /**
@@ -177,7 +177,7 @@
       var URL = window.URL && window.URL.createObjectURL ? window.URL :
                 window.webkitURL && window.webkitURL.createObjectURL ? window.webkitURL :
                 null;
-      if (!URL) { throw Error("No createObjectURL function found to create blob url"); }
+      if (!URL) { throw Error('No createObjectURL function found to create blob url'); }
       img.src = URL.createObjectURL(srcImage);
       srcImage = img;
     }
@@ -187,7 +187,7 @@
         var listeners = _this.imageLoadListeners;
         if (listeners) {
           _this.imageLoadListeners = null;
-          for (var i=0, len=listeners.length; i<len; i++) {
+          for (var i = 0, len = listeners.length; i < len; i++) {
             listeners[i]();
           }
         }
@@ -226,7 +226,7 @@
       height = maxHeight;
       width = (imgWidth * height / imgHeight) << 0;
     }
-    var opt = { width : width, height : height };
+    var opt = { width: width, height: height };
     for (var k in options) opt[k] = options[k];
 
     var tagName = target.tagName.toLowerCase();
