@@ -9,10 +9,27 @@ $('document').ready(function() {
     action: 'php-iqengines/query.php',
     onComplete: function(data) {
       data = $.parseJSON(data).results[0].metadata;
+      make = data.make;
+      model = data.model;
       $('select#make option[value="' + data.make + '"]').attr('selected', 'selected');
       $('select#model option[value="' + data.model + '"]').attr('selected', 'selected');
       $('#make').selectmenu().selectmenu('refresh');
       $('#model').selectmenu().selectmenu('refresh');
+      $('#year').change(function(){
+        $.ajax({
+          'url' : 'price.php',
+          'dataType': 'json',
+          data: {
+            make:make,
+            model:model,
+            year:$(this).val()
+          },
+          success: function(data) {
+            $('input#price').val(data['Average Cycletrader.com Price']);
+            console.log(data);
+          }
+        });
+      });
       $.ajax({
         'url' : 'price.php',
         'dataType': 'json',
