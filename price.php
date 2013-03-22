@@ -50,7 +50,18 @@ function getAveragePrice($bikeMake, $bikeModel) {
             }
         }
     }
-    echo json_encode(array("Make" => $bikeMake, "Model" => $bikeModel, "Average Cycletrader.com Price" => round($total / $i), "Min Price" => $minPrice, "Max Price" => $maxPrice, "Min Year" => $minYear, "Max Year" => $maxYear, "Categories" => $categories,));
+    echo json_encode(
+        array(
+            "Make" => $bikeMake,
+            "Model" => $bikeModel,
+            "Average Cycletrader.com Price" => "$" . number_format(round($total / $i)),
+            "Min Price" => $minPrice,
+            "Max Price" => $maxPrice,
+            "Min Year" => $minYear,
+            "Max Year" => $maxYear,
+            "Categories" => $categories,
+       )
+   );
 }
 /*
 
