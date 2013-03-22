@@ -20,6 +20,14 @@
        document.getElementById("getUserImage").click();
      }
      </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                  log('Latitude = ' + position.coords.latitude)
+                  log('Longitude = ' + position.coords.longitude);
+                });
+        }
+    </script>
      <script type="text/javascript" src="http://www.google.com/jsapi?key=AIzaSyCjxTG2gQuk0JofunIEZ4nBHj0uwcOIolA&amp;sensor=true">
      </script>      
     </head>
