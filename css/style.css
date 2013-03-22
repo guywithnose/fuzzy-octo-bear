@@ -63,12 +63,12 @@ canvas{
 .moreOptionsLink{text-align:center;}
 
 .ui-bar-a{
-    background:url('images/realm-swoosh.png') repeat scroll 0px 0px;
+    background:url('../images/realm-swoosh.png') repeat scroll 0px 0px;
     background-size: 100%;
     background-color:#200000;
 }
 .ui-header .ui-title, .ui-footer .ui-title{margin:10px 0px;}
-
+.ui-footer h6{font-weight:normal;font-size:14px;color:#b6b6b6;}
 .photoInput{
     height:0px; 
     width:0px; 

@@ -6,9 +6,9 @@
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <title>MotoRec - Powered by CycleTrader.com</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/cycle-jq.css" />
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
-	<link rel="stylesheet" href="css/cycle-jq.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="javascript/megapix-image.js"></script>
 	<script src="javascript/picupload.js"></script>
@@ -33,8 +33,6 @@
         </div>
             <div data-role="content">
                 <div class="content-primary">		
-                    <p>The fast way to post a classified.</p>
-                    <hr>
                     <h2>Start by adding a photo.</h2>
                 </div>
                 <div id="photoBtn" class="imageBox" onclick="getFile()">
@@ -42,6 +40,9 @@
                 <canvas id="printUserPicture">Your browser does not support the HTML5 canvas tag.</canvas>
                 </div>
             </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <h6>The fast way to post a classified.</h6>
+        </div>    
         </div>
 <!---end page 1-->
 
@@ -58,6 +59,8 @@
                 </div>
                 <a data-role="button" href="#page3" data-transition="slidefade">ajax loads next page</a>
         </div>
+            <h6>The fast way to post a classified.</h6>
+        </div>    
         </div>
 <!---end page 2-->
 <!-- Start page 3 -->
@@ -91,6 +94,9 @@
                 <a data-role="button" href="#page4" data-transition="slidefade">Yes</a>
                 <a href="" class="moreOptionsLink">No, I want more options.</a>
                 </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <h6>The fast way to post a classified.</h6>
+        </div>    
         </div>
 <!---end page 3-->
 <!-- Start page 4 -->
@@ -106,7 +112,10 @@
                     <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><label for="email" class="ui-input-text">Email:</label><input type="email" value="" id="email" name="email" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset"></div>
                     <a data-role="button" href="#page5" data-transition="slidefade">Post It!</a>
                 </div>
-            </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <h6>The fast way to post a classified.</h6>
+        </div>        
+        </div>
 <!---end page 4-->
 <!-- Start page 5 -->
         <div data-role="page" id="page5">
@@ -118,6 +127,9 @@
                 <div class="content-primary5">		
                     <h2>All done! <a href="http://www.cycletrader.com">Check out your ad.</a></h2>
                 </div>        
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <h6>The fast way to post a classified.</h6>
+        </div>
         </div>
 <!---end page 5-->        
     </body>
