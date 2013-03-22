@@ -3,7 +3,8 @@ $('document').ready(function(){
 		name: 'temp',
 		enctype: 'multipart/form-data',
 		action: 'php-iqengines/query.php',
-		onComplete: function(){
+		onComplete: function(data){
+			console.log($.parseJSON(data).results[0].metadata);
 			$('#processingRequest').fadeOut('fast');
 			$.mobile.changePage('#page2', {transition: 'pop'});
 		},
