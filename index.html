@@ -20,6 +20,14 @@
        document.getElementById("getUserImage").click();
      }
      </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                  log('Latitude = ' + position.coords.latitude)
+                  log('Longitude = ' + position.coords.longitude);
+                });
+        }
+    </script>
      <script type="text/javascript" src="http://www.google.com/jsapi?key=AIzaSyCjxTG2gQuk0JofunIEZ4nBHj0uwcOIolA&amp;sensor=true">
      </script>      
     </head>
@@ -72,28 +80,25 @@
                                       <option value="2014">2014</option>
                                     </select>
 
-                                    <select id="make">
-                                      <option value="honda">Honda</option>
-                                      <option value="Harley-Davidson">Harley-Davidson</option>
+                                    <select>
+                                      <option value="Honda">Honda</option>
                                       <option value="Yamaha">Yamaha</option>
                                       <option value="Honda">Honda</option>
                                       <option value="Suzuki">Suzuki</option>
                                     </select> 
 
-                                    <select id="model">
+                                    <select>
                                       <option value="CBR 600">CBR 600</option>
                                       <option value="CBR 900">CBR 900</option>
                                       <option value="CBR 1000">CBR 1000</option>
                                       <option value="CBR 1200">CBR 1200</option>
-                                      <option value="gold wing">Gold Wing</option>
-                                      <option value="Dyna Wide Glide FXDWG">Dyna Wide Glide FXDWG</option>
                                     </select>                                     
                                     </fieldset>
                                 </div>
                                 <div class="resultInfo">
                                     <input type="text" value="$7,999" id="price"/>
                                     <input type="text" value="Red, 600cc, 900lbs, 4 cylinder, sportbike" id="description"/>
-                                    <input type="text" value="Carrollton, TX" id="location"/>
+                                    <input type="text" value="Norfolk, VA" id="location"/>
                                 </div>
                             </div>
                         <div class="clear"></div>
