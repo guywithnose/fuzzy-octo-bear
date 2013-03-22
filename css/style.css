@@ -3,7 +3,7 @@
     box-shadow: inset 0px 0px 100px 1px rgba(0, 0, 0, .5); 
 }
 a.ctlogo, a.ctlogo:active, a.ctlogo:hover, a.ctlogo:visited, a.ctlogo:link {
-    background-image: url("http://images.traderonline.com/img/tol-design/ctol/m/v2/sprt-logo-400x34.png");
+    background-image: url("../images/motorec-logo.png");
 }
 a.logo, a.logo:active, a.logo:focus, a.logo:hover, a.logo:visited, a.logo:link {
     background-repeat: no-repeat;
@@ -26,17 +26,22 @@ a.logo span {
     display: block;
     float: left;
     height: 30px;
-    left: -20px;
+    left: -30px;
     margin: 0;
     padding: 0;
     position: relative;
-    top: 0;
+    top: 5px;
     width: 30px;
 }
 a.ctlogo span {
     background: url("http://images.traderonline.com/img/tol-design/ctol/m/v2/sprt-icons-75x35.png") no-repeat scroll -43px -1px transparent;
 }
-
+span.cycletrader{width:200px; background:url(http://images.traderonline.com/img/tol-design/ctol/m/v2/sprt-logo-400x34.png);
+    display: block;
+    height: 33px;
+    margin: 0 auto;
+    width: 200px;
+}
 .imageBox {
     background: url("http://codiqa.com/static/images/v2/image.png") no-repeat scroll center center #f5f5f5;
     border: 1px solid #B8B8B8;
