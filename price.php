@@ -10,13 +10,18 @@ if (isset($_GET['model'])) {
     $userBikeModel = $_GET['model'];
 }
 
+$userBikeYear = null;
+if (isset($_GET['year'])) {
+    $userBikeYear = $_GET['year'];
+}
+
 if ($userBikeMake != NULL || $userBikeModel != NULL) {
-    getAveragePrice($userBikeMake, $userBikeModel);
+    getAveragePrice($userBikeMake, $userBikeModel, $userBikeYear);
 } else {
     echo json_encode(array());
 }
 
-function getAveragePrice($bikeMake, $bikeModel) {
+function getAveragePrice($bikeMake, $bikeModel, $bikeYear) {
     $i = 0;
     $total = 0;
     $minPrice = 0;
@@ -24,7 +29,16 @@ function getAveragePrice($bikeMake, $bikeModel) {
     $minYear = 0;
     $maxYear = 0;
     $categories = array();
-    $testing = (TOL_Nebulous::getInstance()->getCycles(array("makeDisplayName" => $bikeMake, "modelDisplayName" => $bikeModel, "view" => "full")));
+    $arParams = array(
+        "makeDisplayName" => $bikeMake,
+        "modelDisplayName" => $bikeModel,
+        "view" => "full"
+    );
+    if ($bikeYear != null) {
+        $arParams['minYear'] = $bikeYear;
+        $arParams['maxYear'] = $bikeYear;
+    }
+    $testing = (TOL_Nebulous::getInstance()->getCycles($arParams));
     foreach ($testing["result"] as $cycle) {
         if (!empty($cycle["price"])) {
             if ($minPrice == 0) {
@@ -49,6 +63,12 @@ function getAveragePrice($bikeMake, $bikeModel) {
                 $categories[$cycle['categoryName']] = 1;
             }
         }
+    }
+    if ($i == 0) {
+        if ($bikeYear != null) {
+            getAveragePrice($bikeMake, $bikeModel, null);
+        }
+        return;
     }
     echo json_encode(
         array(
