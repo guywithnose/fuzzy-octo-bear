@@ -35,11 +35,10 @@
                 <div class="content-primary">		
                     <h2>Start by adding a photo.</h2>
                 </div>
-
-                <!--<div id="photoBtn" class="imageBox" onclick="getFile()">-->
-                 <input type="file" id="getUserImage" accept="image/*" capture>
-                <canvas id="printUserPicture">Your browser does not support the HTML5 canvas tag.</canvas>
-               <!-- </div>-->
+                <div id="photoBtn" class="imageBox">
+                    <!--photoInput is hidden--><div class="photoInput"><input type="file" id="getUserImage" accept="image/*" capture></div>
+                <canvas class="printUserPicture">Your browser does not support the HTML5 canvas tag.</canvas>
+                </div>
             </div>
         <div data-theme="a" data-role="footer" data-position="fixed">
             <h6>The fast way to post a classified.</h6>
@@ -58,11 +57,11 @@
                 <div class="content-primary">
                     <div style="display:block;" class="ui-loader ui-corner-all ui-body-a ui-loader-verbose"><span class="ui-icon ui-icon-loading"></span><h1>...building your ad</h1></div>
                 </div>
-                <a data-role="button" href="#page3" data-transition="slidefade">ajax loads next page</a>
-        </div>
+            </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
             <h6>The fast way to post a classified.</h6>
+        </div>   
         </div>    
-        </div>
 <!---end page 2-->
 <!-- Start page 3 -->
         <div data-role="page" id="page3">
@@ -71,6 +70,7 @@
                 <a class="ctlogo logo" title="CycleTrader.com" href="#page1" data-transition="fade"><span></span>CycleTrader.com</a>
             </h3>
         </div>
+                <div data-role="content">
                 <div class="content-primary">		
                     <h2>Here's what we recognized:</h2>
                     <div class="listingContainer"> 
@@ -96,6 +96,7 @@
                 <a data-role="button" href="#page4" data-transition="slidefade">Yes</a>
                 <a href="" class="moreOptionsLink">No, I want more options.</a>
                 </div>
+                </div>
         <div data-theme="a" data-role="footer" data-position="fixed">
             <h6>The fast way to post a classified.</h6>
         </div>    
@@ -108,11 +109,13 @@
                 <a class="ctlogo logo" title="CycleTrader.com" href="#page1" data-transition="fade"><span></span>CycleTrader.com</a>
             </h3>
         </div>
+                <div data-role="content">
                 <div class="content-primary">		
                     <h2>Just need some info:</h2>
                     <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><label for="number-pattern" class="ui-input-text">Phone:</label><input type="number" placeholder="555-567-5678" value="" id="number-pattern" pattern="[0-9]*" name="number" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset"></div>
                     <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br"><label for="email" class="ui-input-text">Email:</label><input type="email" value="" id="email" name="email" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset"></div>
                     <a data-role="button" href="#page5" data-transition="slidefade">Post It!</a>
+                </div>
                 </div>
         <div data-theme="a" data-role="footer" data-position="fixed">
             <h6>The fast way to post a classified.</h6>
@@ -126,9 +129,11 @@
                 <a class="ctlogo logo" title="CycleTrader.com" href="#page1" data-transition="fade"><span></span>CycleTrader.com</a>
             </h3>
         </div> 
+                <div data-role="content">
                 <div class="content-primary5">		
                     <h2>All done! <a href="http://www.cycletrader.com">Check out your ad.</a></h2>
-                </div>        
+                </div>
+                </div>                
         <div data-theme="a" data-role="footer" data-position="fixed">
             <h6>The fast way to post a classified.</h6>
         </div>
